@@ -83,7 +83,7 @@ public class Main {
             // Get the specific member
             Vampire member = thisFamily.getFamilyMembers()[i];
             // Ensure that the member is a valid vampire object and if so print its first name and surname
-            if (member != null) System.out.println("- " + member.getFirstName() + " " + member.getSurname());
+            if (member != null) System.out.println("- " + member.getFirstName() + " " + member.getLastName());
         }
     }
 }

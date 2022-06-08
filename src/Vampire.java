@@ -4,18 +4,18 @@ public class Vampire {
     private String firstName;
 
     /** @var firstName String */
-    private String surname;
+    private String lastName;
 
     /**
      * Constructor for the VampireFamily Class
      *
      * @param firstName String
-     * @param surname   String
+     * @param lastName  String
      */
-    public Vampire (String firstName, String surname) {
+    public Vampire (String firstName, String lastName) {
         // Set the first name of this vampire, which is required by the constructor method
         setFirstName(firstName);
-        setSurname(surname);
+        setLastName(lastName);
     }
 
     /**
@@ -35,19 +35,19 @@ public class Vampire {
     }
 
     /**
-     * Get the surname of this vampire
+     * Get the last name of this vampire
      *
-     * @return surname String
+     * @return lastName String
      */
-    public String getSurname () {
-        return surname;
+    public String getLastName () {
+        return lastName;
     }
 
     /**
-     * Set the surname of this vampire
+     * Set the last name of this vampire
      */
-    public void setSurname (String thisSurname) {
-        surname = thisSurname;
+    public void setLastName (String thisLastName) {
+        lastName = thisLastName;
     }
 
 }

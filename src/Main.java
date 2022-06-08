@@ -1,7 +1,7 @@
 public class Main {
 
     /**
-     * Main method, that will do some fancy suff
+     * Main method, that will do some fancy stuff
      *
      * @param args String[]
      */

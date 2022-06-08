@@ -8,20 +8,28 @@ public class Main {
     public static void main (String[] args) {
 
         // Initialize a new vampire family
-        VampireFamily family = new VampireFamily("Crimsons");
+        VampireFamily family  = new VampireFamily("Crimsons");
+        // Initialize a new array of vampire names
+        String[] vampireNames = new String[] { "Amber", "Damien", "Edward" };
 
-        // Initialize three new vampires
-        Vampire vampire1 = new Vampire("Amber");
-        Vampire vampire2 = new Vampire("Damien");
-        Vampire vampire3 = new Vampire("Edward");
-
-        // Add those vampires to the vampire family
-        addVampireToFamily(family, vampire1);
-        addVampireToFamily(family, vampire2);
-        addVampireToFamily(family, vampire3);
-
+        // Initialize all vampires and add them to the vampire family
+        createAndAddVampires(family, vampireNames);
         // Print the results
         printVampireFamily(family);
+    }
+
+    /**
+     * Initialize a new vampire object for each vampire name, set the name and add the vampire to the family member array
+     *
+     * @param family       VampireFamily
+     * @param vampireNames String[]
+     */
+    protected static void createAndAddVampires(VampireFamily family, String[] vampireNames) {
+        // Iterate over each name
+        for (String vampireName : vampireNames) {
+            // Add the initialized vampire to the family
+            addVampireToFamily(family, new Vampire(vampireName));
+        }
     }
 
     /**

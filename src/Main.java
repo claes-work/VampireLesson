@@ -13,7 +13,7 @@ public class Main {
         String[] vampireNames = new String[] { "Amber", "Damien", "Edward" };
 
         // Initialize all vampires and add them to the vampire family
-        createAndAddVampires(family, vampireNames);
+        initializeAndAddVampires(family, vampireNames);
         // Print the results
         printVampireFamily(family);
     }
@@ -24,7 +24,7 @@ public class Main {
      * @param family       VampireFamily
      * @param vampireNames String[]
      */
-    protected static void createAndAddVampires(VampireFamily family, String[] vampireNames) {
+    protected static void initializeAndAddVampires(VampireFamily family, String[] vampireNames) {
         // Iterate over each name
         for (String vampireName : vampireNames) {
             // Add the initialized vampire to the family

@@ -1,4 +1,4 @@
-public class Main {
+public class VampireTest {
 
     /**
      * Main method, that will do some fancy suff
@@ -9,31 +9,31 @@ public class Main {
 
         // Initialize a new vampire family
         VampireFamily family  = new VampireFamily("Crimsons");
-        // Initialize a new array of vampire names
-        String[] vampireNames = new String[] { "Amber", "Damien", "Edward" };
 
-        // Initialize all vampires and add them to the vampire family
-        initializeAndAddVampires(family, vampireNames);
-        // Print the results
-        printVampireFamily(family);
+        // Initialize a new vampire
+        Vampire vampire = new Vampire(
+                "Amber",
+                family.getFamilyName(),
+                "1862"
+        );
+
+        // Set the vampires animal shape
+        vampire.setAnimalShape("Fledermaus");
+
+        // Add a count of human lives that the vampire has taken
+        vampire.addHumanLivesTaken(12);
+
+        // Print the information about this vampire
+        print(vampire);
     }
 
     /**
-     * Initialize a new vampire object for each vampire name, set the name and add the vampire to the family member array
+     * Print all information of this vampire
      *
-     * @param family       VampireFamily
-     * @param vampireNames String[]
+     * @param vampire Vampire
      */
-    protected static void initializeAndAddVampires(VampireFamily family, String[] vampireNames) {
-        // Iterate over each name
-        for (String vampireName : vampireNames) {
-            // Add the initialized vampire to the family
-            addVampireToFamily(family, new Vampire(
-                    vampireName,
-                    family.getFamilyName()
-                )
-            );
-        }
+    protected static void print(Vampire vampire) {
+        System.out.println("Der Vampir mit dem Namen " + vampire.getFirstName() + " " + vampire.getLastName() + ", wurde im Jahr " + vampire.getYearOfBirth() + " geboren und kann die Gestalt einer " + vampire.getAnimalShape() + " annehmen. Er hat bereits " + vampire.getHumanLivesTaken() + " Menschen getoetet.");
     }
 
     /**

@@ -28,7 +28,11 @@ public class Main {
         // Iterate over each name
         for (String vampireName : vampireNames) {
             // Add the initialized vampire to the family
-            addVampireToFamily(family, new Vampire(vampireName));
+            addVampireToFamily(family, new Vampire(
+                    vampireName,
+                    family.getFamilyName()
+                )
+            );
         }
     }
 
@@ -78,8 +82,8 @@ public class Main {
 
             // Get the specific member
             Vampire member = thisFamily.getFamilyMembers()[i];
-            // Ensure that the member is a valid vampire object and if so print its name
-            if (member != null) System.out.println("- " + member.getFirstName());
+            // Ensure that the member is a valid vampire object and if so print its first name and surname
+            if (member != null) System.out.println("- " + member.getFirstName() + " " + member.getSurname());
         }
     }
 }
